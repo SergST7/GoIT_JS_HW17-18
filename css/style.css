@@ -1,0 +1,19 @@
+
+.wrapper {
+	width: 80%;
+	padding: 40px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color: white;
+	font-size: 18px;
+}
+
+.slider{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+h2 {
+	text-align: center;
+}

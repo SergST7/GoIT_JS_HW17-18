@@ -8,9 +8,9 @@
 
 $(function () {
 
-	var $div = $('<h2>Фаил подключен</h2>');
+	var $div = $('<h2>Плагин подключен</h2>');
 
-	$('body').append($div);
+	$('.wrapper').prepend($div);
 
 	$('.pgwSlider').pgwSlider({
 		displayList	:	false,

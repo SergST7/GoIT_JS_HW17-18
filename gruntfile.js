@@ -14,15 +14,27 @@ module.exports = function (grunt) {
 				separator: ';'
 			},
 
-			dist: {
+			js: {
 				src: [
 					'js/libs/*.js', // Все JS в папке libs
 					'js/plugins/*.js', // Все JS в папке libs
 					'js/main.js'  // Конкретный файл
 				],
 				dest: 'js/build/production.js'
-			},
+			}
 
+		},
+
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1
+			},
+			target: {
+				files: {
+					'css/build/production.css': 'css/*.css'
+				}
+			}
 		},
 
 		uglify: {
@@ -36,9 +48,9 @@ module.exports = function (grunt) {
 			dynamic: {
 				files: [{
 					expand: true,
-					cwd: 'images/',
+					cwd: 'img/',
 					src: ['**/*.{png,jpg,gif}'],
-					dest: 'images/build/'
+					dest: 'img/build/'
 				}]
 			}
 		}
@@ -47,10 +59,11 @@ module.exports = function (grunt) {
 
 	// 3. Тут мы указываем Grunt, что хотим использовать этот плагин
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	// 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat', 'cssmin', 'uglify', 'imagemin']);
 
 };
