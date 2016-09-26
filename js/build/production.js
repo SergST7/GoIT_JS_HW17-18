@@ -10072,7 +10072,8 @@ if ( !noGlobal ) {
 
 return jQuery;
 } );
-;/**
+
+/**
  * @license
  * lodash <https://lodash.com/>
  * Copyright jQuery Foundation and other contributors <https://jquery.org/>
@@ -26805,7 +26806,8 @@ return jQuery;
     root._ = _;
   }
 }.call(this));
-;/**
+
+/**
  * PgwSlider - Version 2.3
  *
  * Copyright 2014, Jonathan M. Piat
@@ -27559,7 +27561,8 @@ return jQuery;
         return this;
     }
 })(window.Zepto || window.jQuery);
-;/**
+
+/**
  * Created by SergST on 23.09.2016.
  */
 
